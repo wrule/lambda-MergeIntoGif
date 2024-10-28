@@ -1,11 +1,11 @@
 import dayjs from 'dayjs';
+import picListToGif from './picListToGif.js';
 
 export
 const handler = async (event: any) => {
-  const response = {
+  return {
     statusCode: 200,
-    body: JSON.stringify('Hello from Lambda!'),
-    timeNow: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+    now: dayjs().format('YYYY-MM-DD HH:mm:ss.SSS'),
+    gif: await picListToGif(event.pics, event.delayCentisecs, event.w, event.h),
   };
-  return response;
-};
+}
