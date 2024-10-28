@@ -2,8 +2,11 @@
   "name": "lambda-mergeintogif",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "node ./dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +16,8 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "dayjs": "^1.11.13"
+    "dayjs": "^1.11.13",
+    "gifwrap": "^0.10.1",
+    "jimp": "^1.6.0"
   }
 }
